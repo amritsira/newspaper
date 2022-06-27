@@ -3,13 +3,20 @@ import React,{useEffect, useState} from 'react'
 
 
 const Weatherinfo = () => {
-
+    const [lat ,setLat] = useState(0);
+    const [lon ,setLon] = useState(0);
 
     const options = {
         enableHighAccuracy: true,
         timeout: 5000,
         maximumAge: 0
       };
+    
+    const myvals = function (lat , long){
+            setLat(lat);
+           setLon(long);
+      }
+        
       
       function success(pos) {
         const crd = pos.coords;
@@ -24,18 +31,13 @@ const Weatherinfo = () => {
       
       navigator.geolocation.getCurrentPosition(success, error, options);
     
-    const myvals = function (lat , long){
-   
-            setLat(lat);
-           setLon(long);
-      }
+
     
 
 
 
 
-    const [lat ,setLat] = useState(0);
-    const [lon ,setLon] = useState(0);
+
 
     
     function getweather(lat , lon){
