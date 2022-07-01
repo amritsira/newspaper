@@ -3,6 +3,8 @@ import React,{useEffect, useState} from 'react'
 
 
 const Weatherinfo = () => {
+    const [lat ,setLat] = useState(0);
+    const [lon ,setLon] = useState(0);
 
 
     const options = {
@@ -34,8 +36,6 @@ const Weatherinfo = () => {
 
 
 
-    const [lat ,setLat] = useState(0);
-    const [lon ,setLon] = useState(0);
 
     
     function getweather(lat , lon){

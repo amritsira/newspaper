@@ -10,6 +10,14 @@ const options = {
     maximumAge: 0
   };
   
+
+  const myvals = function (lat , long){
+    setlat(lat);
+    setlong(long);
+}
+
+
+
   function success(pos) {
     const crd = pos.coords;
   
@@ -26,10 +34,7 @@ const options = {
   
   navigator.geolocation.getCurrentPosition(success, error, options);
 
-const myvals = function (lat , long){
-       setlat(lat);
-       setlong(long);
-  }
+
 
 
 

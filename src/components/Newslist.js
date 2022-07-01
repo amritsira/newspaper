@@ -1,6 +1,6 @@
 import React,{useState, useEffect} from 'react'
 import Newsitem from './Newsitem';
-import {articles} from '../data';
+// import {articles} from '../data';
 // https://gnews.io/api/v4/search?q=india&lang=hi&token=8cc43b12ac9ecf8f6098f26ebc1db042
 let GLOBLE_ID = 1;
 const Newslist = () => {
